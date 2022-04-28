@@ -1,0 +1,277 @@
+/*========== Base ==========*/
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #bfb2a7;
+}
+.center_div {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: #b93170;
+  color: whitesmoke;
+  font-size: 25px;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.button:hover {
+  color: whitesmoke;
+  background-color: #3a4041;
+}
+
+/*========== Splash Page__Home Section ==========*/
+.home__img_cover {
+  display: flex;
+  gap: 40px;
+  margin-top: 100px;
+}
+
+.home__img {
+  height: 550px;
+  justify-self: center;
+  margin: 40px;
+}
+.home__title {
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.home__subtitle {
+  font-size: 30px;
+  font-weight: 600;
+  color: #b93170;
+  margin-bottom: 30px;
+}
+.home__list {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.home__link {
+  color: #3a4041;
+}
+.home__link:hover {
+  color: #b93170;
+}
+.home__buttons {
+  margin-top: 40px;
+}
+.home__img_features {
+  margin-top: 30px;
+  display: flex;
+}
+.home__imgz {
+  width: 250px;
+}
+
+@media screen and (max-width: 992px) {
+  .home__img_container {
+    display: none;
+  }
+}
+/*========== Pomodoro Timer Section ==========*/
+.pomodoroTimer_container {
+  height: 300px;
+  width: 480px;
+  margin: 40px 0px;
+  color: whitesmoke;
+  border: 7px solid #b93170;
+  background-color: #3a4041;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/*timers*/
+.label {
+  align-self: center;
+  justify-self: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#work {
+  grid-area: 1 / 2 / 1 / 2;
+}
+#break {
+  grid-area: 1 / 4 / 1 / 4;
+}
+
+.pomodoroTimer {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#work-timer {
+  grid-area: 2 / 2 / 2 / 2;
+}
+
+#break-timer {
+  grid-area: 2 / 4 / 2 / 4;
+}
+
+.btnz {
+  align-self: center;
+  justify-self: center;
+  color: #3a4041;
+  font-weight: 500;
+  font-size: 25px;
+}
+.btnz:hover {
+  color: #b93170;
+  border: 2px solid #b93170;
+}
+
+#start {
+  grid-area: 3 / 2 / 3 / 2;
+}
+
+#reset {
+  grid-area: 3 / 3 / 3 / 3;
+}
+
+#stop {
+  grid-area: 3 / 4 / 3 / 4;
+}
+.squid__gif {
+  margin: 40px 70px;
+}
+/*========== Flashcards Section ==========*/
+.flashc_container {
+  margin-top: 80px;
+}
+.flc_text {
+  color: whitesmoke;
+}
+
+#create_card {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 10px;
+  background: #3a4041;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+#create_card h2 {
+  color: whitesmoke;
+  text-align: center;
+}
+
+#create_card textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+#create_card button {
+  width: fit-content;
+}
+#save_card {
+  margin-top: 20px;
+}
+
+#flashcards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+
+.flashcard {
+  width: 370px;
+  height: 200px;
+  word-wrap: break-word;
+  margin: 10px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+/*========== To Do List Section ==========*/
+.todo__container {
+  width: 420px;
+  margin: auto;
+  margin-top: 70px;
+}
+.inputVal {
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+
+  border: none;
+}
+.inputvalue {
+  display: flex;
+  margin: 50px 10px;
+  margin-top: 20px;
+}
+
+.todoList {
+  height: 50px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3a4041;
+  border-radius: 5px;
+}
+.deleteTask {
+  cursor: pointer;
+  text-align: center;
+  background: #b93170;
+  color: #ffffff;
+  outline: none;
+  align-items: center;
+}
+.pText {
+  color: #bfb2a7;
+}
+
+.todo_btn {
+  display: inline-block;
+  background-color: #3a4041;
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: none;
+}
+.todo_btn:hover {
+  color: #3a4041;
+  background-color: aquamarine;
+}
