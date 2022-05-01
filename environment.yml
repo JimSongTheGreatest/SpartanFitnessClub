@@ -1,0 +1,30 @@
+name: spartan-fitness-club
+dependencies:
+  - python=3.10.4
+  - pip
+  - pip:
+    - attrs==21.4.0
+    - blinker==1.4
+    - click==8.1.3
+    - Flask==2.1.2
+    - Flask-Login==0.6.0
+    - Flask-Mail==0.9.1
+    - Flask-SQLAlchemy==2.5.1
+    - Flask-WTF==1.0.1
+    - iniconfig==1.1.1
+    - itsdangerous==2.1.2
+    - Jinja2==3.1.2
+    - MarkupSafe==2.1.1
+    - packaging==21.3
+    - pip==22.0.4
+    - pluggy==1.0.0
+    - py==1.11.0
+    - pyparsing==3.0.8
+    - pytest==7.1.2
+    - python-dotenv==0.20.0
+    - setuptools==62.1.0
+    - SQLAlchemy==1.4.36
+    - tomli==2.0.1
+    - Werkzeug==2.1.2
+    - wheel==0.37.1
+    - WTForms==3.0.1

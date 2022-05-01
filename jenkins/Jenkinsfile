@@ -1,0 +1,37 @@
+pipeline {
+    environment {
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+	}
+    stages {
+        stage('Docker Build') {
+            when { changeset "jenkins/agent/*" }
+            agent {
+                label 'docker-agent-dind'
+            }
+            steps {
+                sh 'docker build -t suhailskhan/jenkins-agent-sfc ./jenkins/agent'
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh 'docker push suhailskhan/jenkins-agent-sfc'
+            }
+        }
+        stage('Build') 
+        { 
+            agent {
+                label 'docker-agent-sfc'
+            }
+            steps {
+                sh 'python -m venv venv'
+                sh './venv/bin/pip install --upgrade pip' 
+                sh './venv/bin/pip install -r ./api/requirements.txt'
+            }
+        }
+        stage('Test') {
+            agent {
+                label 'docker-agent-sfc'
+            }
+            steps {
+                sh './jenkins/scripts/test.sh'
+            }
+        }
+    }
+}

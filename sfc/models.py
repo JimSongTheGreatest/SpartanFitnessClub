@@ -1,8 +1,10 @@
-from myapp import db
+from flask import Blueprint
+from sfc import db, login
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
-from myapp import login
+
+bp = Blueprint('models', __name__, url_prefix='/')
 
 
 class User(UserMixin, db.Model):

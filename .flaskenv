@@ -1,0 +1,4 @@
+FLASK_APP=sfc
+FLASK_ENV=development
+FLASK_RUN_HOST=localhost
+FLASK_RUN_PORT=5001
