@@ -57,9 +57,19 @@ def logout():
     return redirect('/')
 
 
-@bp.route("/delete",)
+@bp.route("/delete")
 def delete():
     user = User.query.filter_by(id=1).delete()
     db.session.commit()
     flash('Your account is deleted', 'error')
     return redirect("/register")
+
+@bp.route('/merchandise')
+def merchandise():
+    title = 'SFC Merchandise'
+    return render_template("merchandise.html", title=title)
+
+@bp.route('/account')
+def account():
+    title = 'SFC Account'
+    return render_template("account.html", title=title)
