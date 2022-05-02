@@ -11,7 +11,6 @@ from sfc.models import User
 bp = Blueprint('routes', __name__, url_prefix='/')
 
 
-
 @bp.route('/')
 def splash():
     title = 'Spartan Fitness Club'

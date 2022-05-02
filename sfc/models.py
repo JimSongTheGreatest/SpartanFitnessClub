@@ -9,9 +9,9 @@ bp = Blueprint('models', __name__, url_prefix='/')
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(64),unique=True, index=True)
+    username = db.Column(db.String(64), unique=True, index=True)
     password = db.Column(db.String(128))
-    posts = db.relationship('Post', backref='author', lazy = 'dynamic')
+    posts = db.relationship('Post', backref='author', lazy='dynamic')
 
     def set_password(self, password):
         self.password = generate_password_hash(password)
@@ -22,6 +22,7 @@ class User(UserMixin, db.Model):
     def __repr__(self):
         return f'<User {self.id}: {self.username}>'
 
+
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.String(256))
@@ -31,17 +32,20 @@ class Post(db.Model):
     def __repr__(self):
         return f'<Post {self.id}: {self.body}>'
 
+
 class todo_list(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer, primary_key=True)
     todo_item = db.Column(db.String(256))
     complete = db.Column(db.Boolean)
 
     def __repr__(self):
         return self.todo_item
 
+
 class flash_cards(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer, primary_key=True)
     secure_filename = db.Column(db.String)
+
 
 @login.user_loader
 def load_user(id):

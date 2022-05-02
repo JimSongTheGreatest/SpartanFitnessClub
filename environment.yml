@@ -4,6 +4,7 @@ dependencies:
   - pip
   - pip:
     - attrs==21.4.0
+    - autopep8==1.6.0
     - blinker==1.4
     - certifi==2021.10.8
     - charset-normalizer==2.0.12
@@ -22,6 +23,7 @@ dependencies:
     - pip==22.0.4
     - pluggy==1.0.0
     - py==1.11.0
+    - pycodestyle==2.8.0
     - pyparsing==3.0.8
     - pytest==7.1.2
     - python-dotenv==0.20.0
@@ -29,6 +31,7 @@ dependencies:
     - setuptools==62.1.0
     - SQLAlchemy==1.4.36
     - stripe==2.74.0
+    - toml==0.10.2
     - tomli==2.0.1
     - urllib3==1.26.9
     - Werkzeug==2.1.2
